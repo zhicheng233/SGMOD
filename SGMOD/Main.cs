@@ -15,18 +15,18 @@ namespace SGMOD {
         //导入dll以设置控制台编码
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool SetConsoleOutputCP(uint wCodePageID);
-        
+
         public override void OnInitializeMelon() {
             //设置控制台编码为UTF-8
             SetConsoleOutputCP(65001);
             PrintLogo();
             PrintWarng();
             string path = "./" + ModInfo.Name + "/config.json";
-            LoggerInstance.Msg("Loading  SGMOD..");
-            LoggerInstance.Msg("Loading Config.json..");
+            MelonLogger.Msg("Loading  SGMOD..");
+            MelonLogger.Msg("Loading Config.json..");
 
             SGMOD.Config.MainConfig config = SGMOD.Config.ConfigManager.Load(path);
-            
+
             if (config.DummyLogin.Enabled == true && config.CustomCameraID.Enabled == true) {
                 MelonLogger.Warning("DummyLogin has been enable,disable CustomCameraID");
                 config.CustomCameraID.Enabled = false;
@@ -48,7 +48,5 @@ namespace SGMOD {
                 "⚠ This mod contains cheating features, which means you are aware of the risks of using it."
             );
         }
-
-
     }
 }
