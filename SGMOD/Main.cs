@@ -26,6 +26,15 @@ namespace SGMOD {
             LoggerInstance.Msg("Loading Config.json..");
 
             SGMOD.Config.MainConfig config = SGMOD.Config.ConfigManager.Load(path);
+            
+            if (config.DummyLogin.Enabled == true && config.CustomCameraID.Enabled == true) {
+                MelonLogger.Warning("DummyLogin has been enable,disable CustomCameraID");
+                config.CustomCameraID.Enabled = false;
+            }
+
+            if (config.CustomCameraID.Enabled == true) {
+                Core.Common.CustomCameraID.PrintCameraIDList();
+            }
         }
 
         public static void PrintLogo() {
