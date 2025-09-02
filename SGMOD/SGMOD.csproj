@@ -251,6 +251,7 @@
 		<Compile Include="Config\ConfigManager.cs" />
 		<Compile Include="Config\MainConfig.cs" />
 		<Compile Include="Core\Common\CustomCameraID.cs" />
+		<Compile Include="Core\Fix\DisableEnvironmenntCheck.cs" />
 		<Compile Include="Main.cs" />
 	</ItemGroup>
 
