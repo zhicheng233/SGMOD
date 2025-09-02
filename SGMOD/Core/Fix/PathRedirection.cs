@@ -1,5 +1,8 @@
 ﻿
+using System.Net;
 using HarmonyLib;
+using Manager.Operation;
+using Net;
 using Path = MAI2System.Path;
 
 namespace SGMOD.Core.Fix;
