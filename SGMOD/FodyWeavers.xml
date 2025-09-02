@@ -1,4 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
-  <Costura />
+  <Costura>
+    <!-- 排除 Unity 和系统自带 DLL，只保留 System.Text.Json -->
+    <ExcludeAssemblies>
+      # Unity 相关
+      UnityEngine
+      UnityEngine.CoreModule
+      UnityEngine.UI
+      UnityEngine.TextMeshPro
+      UnityEngine.Analytics
+      UnityEngine.AccessibilityModule
+      UnityEngine.AIModule
+      UnityEngine.AnimationModule
+      UnityEngine.ARModule
+      UnityEngine.AssetBundleModule
+      UnityEngine.AudioModule
+      UnityEngine.BaselibModule
+      UnityEngine.ClothModule
+      UnityEngine.ClusterInputModule
+      UnityEngine.ClusterRendererModule
+      UnityEngine.CrashReportingModule
+      UnityEngine.DirectorModule
+      UnityEngine.FileSystemHttpModule
+      UnityEngine.GameCenterModule
+      UnityEngine.GridModule
+      UnityEngine.HotReloadModule
+      UnityEngine.ImageConversionModule
+      UnityEngine.IMGUIModule
+      UnityEngine.InputModule
+      UnityEngine.JSONSerializeModule
+      UnityEngine.LocalizationModule
+      UnityEngine.Networking
+      UnityEngine.ParticleSystemModule
+      UnityEngine.PerformanceReportingModule
+      UnityEngine.Physics2DModule
+      UnityEngine.PhysicsModule
+      UnityEngine.ProfilerModule
+      UnityEngine.ScreenCaptureModule
+      UnityEngine.SharedInternalsModule
+      UnityEngine.SpatialTracking
+      UnityEngine.SpriteMaskModule
+      UnityEngine.SpriteShapeModule
+      UnityEngine.StreamingModule
+      UnityEngine.StyleSheetsModule
+      UnityEngine.SubstanceModule
+      UnityEngine.TerrainModule
+      UnityEngine.TerrainPhysicsModule
+      UnityEngine.TextCoreModule
+      UnityEngine.TextRenderingModule
+      UnityEngine.TilemapModule
+      UnityEngine.Timeline
+      UnityEngine.TimelineModule
+      UnityEngine.TLSModule
+      UnityEngine.UIElementsModule
+      UnityEngine.UIModule
+      UnityEngine.UmbraModule
+      UnityEngine.UNETModule
+      UnityEngine.UnityAnalyticsModule
+      UnityEngine.UnityConnectModule
+      UnityEngine.UnityTestProtocolModule
+      UnityEngine.UnityWebRequestAssetBundleModule
+      UnityEngine.UnityWebRequestAudioModule
+      UnityEngine.UnityWebRequestModule
+      UnityEngine.UnityWebRequestTextureModule
+      UnityEngine.UnityWebRequestWWWModule
+      UnityEngine.VehiclesModule
+      UnityEngine.VFXModule
+      UnityEngine.VideoModule
+      UnityEngine.VRModule
+      UnityEngine.WindModule
+      UnityEngine.XRModule
+
+
+      # 系统自带 / 常见基础库
+      mscorlib
+      System.Xml
+      System.Xml.Linq
+      Microsoft.CSharp
+      System.IO.Pipelines
+      ValueTupleBridge
+      
+      # 其他第三方库
+      0Harmony
+      AMDaemon.NET
+      Assembly-CSharp
+      Assembly-CSharp-firstpass
+      AssetRipper.VersionUtilities
+      AssetsTools.NET
+      bHapticsLib
+      ChimeLib.NET
+      MelonLoader
+      Mono.Cecil
+      Mono.Cecil.Mdb
+      Mono.Cecil.Pdb
+      Mono.Cecil.Rocks
+      MonoMod.RuntimeDetour
+      MonoMod.Utils
+      Tomlet
+      WebSocketDotNet
+      zxing.unity
+    </ExcludeAssemblies>
+  </Costura>
 </Weavers>
