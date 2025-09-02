@@ -35,6 +35,21 @@ namespace SGMOD {
             if (config.CustomCameraID.Enabled == true) {
                 Core.Common.CustomCameraID.PrintCameraIDList();
             }
+
+            if (config.DisableEnvironmentCheck) PatchIt(typeof(SGMOD.Core.Fix.DisableEnvironmenntCheck));
+        }
+
+
+        public static void PatchIt(Type cs) {
+            try {
+                MelonLogger.Msg("Patching " + cs.Name + "...");
+                HarmonyLib.Harmony.CreateAndPatchAll(cs);
+            }
+            catch (Exception e) {
+                MelonLogger.Error("Failed to patch:" + cs.Name);
+                MelonLogger.Error("Message:\n" + e.Message);
+                MelonLogger.Error("InnerException:\n" + e.InnerException);
+            }
         }
 
         public static void PrintLogo() {
