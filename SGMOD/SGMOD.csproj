@@ -253,6 +253,7 @@
 		<Compile Include="Core\Common\CustomCameraID.cs" />
 		<Compile Include="Core\Fix\DisableEnvironmenntCheck.cs" />
 		<Compile Include="Core\Fix\DisableIniFileClear.cs" />
+		<Compile Include="Core\Fix\FocusTarget.cs" />
 		<Compile Include="Core\Fix\PathRedirection.cs" />
 		<Compile Include="Main.cs" />
 	</ItemGroup>

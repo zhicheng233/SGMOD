@@ -38,6 +38,8 @@ namespace SGMOD {
 
             if (config.DisableEnvironmentCheck) PatchIt(typeof(SGMOD.Core.Fix.DisableEnvironmenntCheck));
             if (config.PathRedirection) PatchIt(typeof(SGMOD.Core.Fix.PathRedirection));
+            if (config.DisableIniFileClear) PatchIt(typeof(SGMOD.Core.Fix.DisableIniFileClear));
+            if (config.FocusTarget) PatchIt(typeof(SGMOD.Core.Fix.FocusTarget));
         }
 
 

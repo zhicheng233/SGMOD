@@ -7,6 +7,8 @@ public class MainConfig {
     public bool DisableEnvironmentCheck { get; set; } = true;
     public bool PathRedirection { get; set; } = true;
     public bool DisableIniFileClear { get; set; } = true;
+    public bool FocusTarget { get; set; } = true;
+    
     public bool DisableEncryption { get; set; } = true;
     public bool DisableReboot { get; set; } = true;
 
