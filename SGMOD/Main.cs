@@ -37,6 +37,7 @@ namespace SGMOD {
             }
 
             if (config.DisableEnvironmentCheck) PatchIt(typeof(SGMOD.Core.Fix.DisableEnvironmenntCheck));
+            if (config.PathRedirection) PatchIt(typeof(SGMOD.Core.Fix.PathRedirection));
         }
 
 
